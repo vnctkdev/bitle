@@ -45,13 +45,7 @@ export default function RootLayout({
           zIndex: 100,
           backdropFilter: 'blur(8px)',
         }}>
-          <a href="/" style={{
-            fontWeight: 700,
-            fontSize: 24,
-            color: '#fff',
-            textDecoration: 'none',
-            letterSpacing: '-1px',
-          }}>
+          <a href="/" className="bitle-nav-logo">
             Bitle
           </a>
           <nav style={{ display: 'flex', gap: 24 }}>
@@ -76,6 +70,13 @@ export default function RootLayout({
           }
           .bitle-nav-link:hover {
             background: #23272f;
+          }
+          .bitle-nav-logo {
+            font-weight: 700;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -1px;
           }
         `}</style>
       </body>
