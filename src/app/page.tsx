@@ -2,102 +2,73 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+    <main style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #181A20 60%, #23272f 100%)',
+      color: '#fff',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontFamily: 'Pretendard, sans-serif',
+      padding: 24,
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      <div style={{
+        position: 'absolute',
+        top: -120,
+        left: -120,
+        width: 300,
+        height: 300,
+        background: 'radial-gradient(circle, #00e67633 0%, #181A2000 80%)',
+        zIndex: 0,
+        filter: 'blur(8px)'
+      }} />
+      <div style={{
+        position: 'absolute',
+        bottom: -120,
+        right: -120,
+        width: 300,
+        height: 300,
+        background: 'radial-gradient(circle, #2979ff33 0%, #181A2000 80%)',
+        zIndex: 0,
+        filter: 'blur(8px)'
+      }} />
+      <div style={{ zIndex: 1, textAlign: 'center', maxWidth: 480 }}>
+        <h1 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1.2rem', letterSpacing: '-2px', lineHeight: 1.1 }}>
+          Bitle
+        </h1>
+        <h2 style={{ fontSize: '1.3rem', fontWeight: 400, color: '#aaa', marginBottom: '2rem' }}>
+          AI 기반 실시간 금융 데이터 분석 서비스
+        </h2>
+        <p style={{ color: '#bbb', lineHeight: 1.7, marginBottom: 32 }}>
+          전 세계 주식, 코인, 외환 시장의 데이터를 실시간으로 분석하고,<br />
+          복잡한 지표와 AI로 트레이딩 전략을 똑똑하게 추천해드립니다.<br />
+          <br />
+          데이터 기반의 과학적 투자를 지금 경험해보세요.
+        </p>
+        <a href="/chart" className="bitle-cta-btn">
+          시작하기
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <style>{`
+        .bitle-cta-btn {
+          display: inline-block;
+          background: linear-gradient(90deg, #00e676 0%, #2979ff 100%);
+          color: #181A20;
+          font-weight: 700;
+          font-size: 18px;
+          padding: 14px 40px;
+          border-radius: 32px;
+          text-decoration: none;
+          box-shadow: 0 4px 24px #00e67622;
+          transition: transform 0.15s;
+        }
+        .bitle-cta-btn:hover {
+          transform: scale(1.04);
+        }
+      `}</style>
+    </main>
   );
 }

@@ -19,16 +19,66 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="ko">
+      <body style={{
+        margin: 0,
+        background: '#181A20',
+        color: '#fff',
+        fontFamily: 'Pretendard, sans-serif',
+      }}>
+        <header style={{
+          width: '100%',
+          height: 64,
+          background: '#1a1d23cc',
+          borderBottom: '1px solid #23272f',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '0 32px',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          zIndex: 100,
+          backdropFilter: 'blur(8px)',
+        }}>
+          <a href="/" style={{
+            fontWeight: 700,
+            fontSize: 24,
+            color: '#fff',
+            textDecoration: 'none',
+            letterSpacing: '-1px',
+          }}>
+            Bitle
+          </a>
+          <nav style={{ display: 'flex', gap: 24 }}>
+            <a href="/chart" className="bitle-nav-link">
+              차트
+            </a>
+          </nav>
+        </header>
+        <div style={{ paddingTop: 72, minHeight: '100vh' }}>
+          {children}
+        </div>
+        <style>{`
+          .bitle-nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            background: none;
+          }
+          .bitle-nav-link:hover {
+            background: #23272f;
+          }
+        `}</style>
       </body>
     </html>
-  );
+  )
 }
